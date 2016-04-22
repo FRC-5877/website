@@ -451,12 +451,12 @@ h6 {
   }
 }
 .home {
-  background-image: url(../images/hero-img9.jpg);
+  background-image: url(../images/Mechalodons-Shark-Logo.png);
   background-position: top center;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: #000;
+  background-color: #304064;
   padding: 100px 0;
   position: relative
   /* Temp CSS */
@@ -477,22 +477,26 @@ h6 {
   font-family: "Oswald";
   color: #fff;
   text-transform: uppercase;
-  font-size: 70px;
+  font-size: 60px;
   line-height: 85px;
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: 8px;
   word-spacing: 4px;
-  margin-bottom: 15px;
-  margin-top: 5px;
-  padding: 20px 10px;
+  margin-bottom: 0;
+  padding: 0 0;
+}
+.home .hero-txt .hero-title .title-part2 {
+  color: #4ecdc4;
 }
 .home .hero-txt .hero-work {
   font-family: "Oswald";
-  font-weight: 300;
+  font-size: 25px;
+  font-weight: 400;
   letter-spacing: 2px;
-  margin-bottom: 0;
+  margin-bottom: 50px;
+  margin-top: 20px;
 }
-.home .hero-txt .hero-work:after {
+.home .hero-txt .hero-title:after {
   content: "";
   display: block;
   width: 200px;
@@ -559,8 +563,8 @@ h6 {
 }
 .navbar-nav > li > a {
   font-family: "Oswald";
-  font-size: 15px;
-  font-weight: 300;
+  font-size: 16px;
+  font-weight: 400;
   letter-spacing: 1px;
   padding-left: 20px;
   padding-right: 20px;
