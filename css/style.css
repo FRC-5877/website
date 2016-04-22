@@ -2,9 +2,9 @@
  * Sept - Free Bootstrap 3 Theme/Landing page
  * Author: CantoThemes
  * Author URL: https://www.cantothemes.com/
- * License: Attribution-NonCommercial CC BY-NC 
+ * License: Attribution-NonCommercial CC BY-NC
  * License URL: https://creativecommons.org/licenses/by-nc/4.0/
- * 
+ *
  * -------------------------------------------------------------------
  * This theme under "Attribution-NonCommercial CC BY-NC". You can't remove footer credit link.
  */
@@ -451,7 +451,7 @@ h6 {
   }
 }
 .home {
-  background-image: url(../images/Mechalodons-Shark-Logo.png);
+  background-image: url(../images/Mechalodons-Shark-Logo-shade.svg);
   background-position: top center;
   background-attachment: fixed;
   background-repeat: no-repeat;
