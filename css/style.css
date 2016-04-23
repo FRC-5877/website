@@ -347,7 +347,7 @@ h6 {
 .section-title:before {
   content: "";
   display: block;
-  width: 150px;
+  width: 95px;
   height: 71px;
   background-image: url(../images/Mechalodons-Shark-Logo-Monochrome.svg);
   background-repeat: no-repeat;
