@@ -44,8 +44,8 @@
      inkscape:pageshadow="2"
      inkscape:window-height="1057"
      inkscape:window-maximized="1"
-     inkscape:window-width="1858"
-     inkscape:window-x="54"
+     inkscape:window-width="1920"
+     inkscape:window-x="1912"
      inkscape:window-y="-8"
      inkscape:zoom="0.175"
      pagecolor="#ffffff"
@@ -53,7 +53,7 @@
      id="layer1"
      transform="translate(2331.4002,608.58966)"
      inkscape:groupmode="layer"
-     inkscape:label="Layer 1"><g
+     inkscape:label="Logo"><g
        id="g4426"
        transform="matrix(7.5737832,0,0,-7.5737836,-2583.4322,3907.4192)"><g
          id="g4277"
@@ -198,8 +198,8 @@
            d="M-80.6,53.2c-0.1-0.8-0.3-1.8-0.5-3c-0.6-2.6-1.8-6.1-4-9.7     c-1.3-2-2.9-4.1-4.9-6.1c0,0,7.2,5.1,11.9,17.8c0.7,1.8,1.3,3.7,1.8,5.7c0,0-1.2-1.4-3-3.3C-79.7,54.1-80.2,53.6-80.6,53.2" /></g></g></g><g
      inkscape:groupmode="layer"
      id="layer2"
-     inkscape:label="mask"><rect
-       style="opacity:1;fill:#000000;fill-opacity:0.40645166;stroke:none;stroke-width:10.30000019;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     inkscape:label="Shade"><rect
+       style="opacity:1;fill:#000000;fill-opacity:0.68387097;stroke:none;stroke-width:10.30000019;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect4187"
        width="4214.0864"
        height="2757.9089"
