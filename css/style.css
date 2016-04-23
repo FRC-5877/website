@@ -477,7 +477,7 @@ h6 {
   font-family: "Oswald";
   color: #fff;
   text-transform: uppercase;
-  font-size: 60px;
+  font-size: 55px;
   line-height: 85px;
   font-weight: 600;
   letter-spacing: 8px;
@@ -499,8 +499,9 @@ h6 {
 .home .hero-txt .hero-title:after {
   content: "";
   display: block;
-  width: 200px;
-  height: 4px;
+  /*width: 400px;*/
+  width: 40%;
+  height: 1px;
   margin: 20px auto 0;
   background-color: transparent;
   border-width: 1px 0;
@@ -543,6 +544,7 @@ h6 {
 }
 .st-navbar-mini .navbar-default .navbar-brand img {
   height: 30px;
+  width: 20rem;
 }
 .st-navbar-mini .navbar-default .navbar-nav > li.active > a,
 .st-navbar-mini .navbar-default .navbar-nav > li.active a:hover,
@@ -1630,4 +1632,25 @@ footer.site-footer a:hover {
     cursor: pointer;
     width: 25%;
   }
+}
+
+/* Mechalodons Specific */
+.navbar-default .navbar-toggle {
+  margin-top: 1rem;
+  margin-right: 1rem;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .navbar-collapse.collapse {
+        display: none !important;
+    }
+    .navbar-collapse.collapse.in {
+        display: block !important;
+    }
+    .navbar-header .collapse, .navbar-toggle {
+        display:block !important;
+    }
+    .navbar-header {
+        float:none;
+    }
 }
