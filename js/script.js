@@ -20,9 +20,21 @@ $(function () {
 
 		event.preventDefault();
 	});
+
+	$('.home a').bind('click', function(event) {
+		var $anchor = $(this);
+
+		$('html, body').stop().animate({
+			scrollTop: $($anchor.attr('href')).offset().top
+		}, 1500, 'easeInOutExpo');
+
+		event.preventDefault();
+	});
+
 	/*
 	* Fun Fact with Count Animation
 	*/
+	/*
 	$('.st-ff-count').appear();
 	$(document.body).on('appear', '.st-ff-count', function(e, $affected) {
 		$affected.each(function(i) {
@@ -36,6 +48,7 @@ $(function () {
 
 		});
 	});
+	*/
 
 	$('[data-toggle="tooltip"]').tooltip();
 
@@ -45,12 +58,12 @@ $(function () {
     function home_height () {
 		var element = $('.st-home-unit'),
 			elemHeight = element.height(),
-			winHeight = $(window).height()
+			winHeight = $(window).height(),
 			padding = (winHeight - elemHeight - 200) /2;
 
 		if (padding < 1 ) {
 			padding = 0;
-		};
+		}
 		element.css('padding', padding+'px 0');
 	}
 	home_height ();
