@@ -181,7 +181,7 @@ $(function () {
       var data = $this.serialize();
 
       $.ajax({
-          url: "/", 
+          url: "/contact", 
           type: "POST",        
           data: data,     
           cache: false,
