@@ -15,10 +15,10 @@ router.post('/', function(req, res, next) {
       subject: "Contact from Website"
     }, function(err, message) {
       console.log(err || message);
-      res.send(1);
+      res.send({code: 1});
     });
   } else {
-    res.send(0);
+    res.send({code: 0});
   }
 });
 
