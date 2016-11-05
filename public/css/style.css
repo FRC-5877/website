@@ -528,6 +528,72 @@ h6 {
 .home .hero-txt .hero-img {
   margin-top: 80px;
 }
+
+
+
+
+/* Adding this hero-txt-sm for temporarily moving the main title to upper left corner to make room for advert */
+.home .hero-txt-sm {
+  color: #fff;
+  text-align: center;
+}
+.home .hero-txt-sm .hero-title-sm {
+  font-family: "Oswald";
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 25px;
+  line-height: 40px;
+  font-weight: 600;
+  letter-spacing: 8px;
+  word-spacing: 4px;
+  margin-bottom: 0;
+  padding: 0 0;
+}
+.home .hero-txt-sm .hero-title-sm .title-part2-sm {
+  color: #4ecdc4;
+}
+.home .hero-txt-sm .hero-work-sm {
+  font-family: "Oswald";
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+  margin-top: 10px;
+}
+.home .hero-txt-sm .hero-title-sm:after {
+  content: "";
+  display: block;
+  /*width: 400px;*/
+  width: 40%;
+  height: 1px;
+  margin: 10px auto 0;
+  background-color: transparent;
+  border-width: 1px 0;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+.home .hero-txt-sm a.btn {
+  text-transform: uppercase;
+}
+.home .hero-txt-sm a.btn.left-btn {
+  margin-right: 10px !important;
+}
+.home .hero-txt-sm .hero-sub-title {
+  font-family: "Oswald";
+  font-size: 15px;
+  letter-spacing: 5px;
+  font-weight: 300;
+  margin-bottom: 35px;
+}
+.home .hero-txt-sm .hero-img {
+  margin-top: 40px;
+}
+
+
+
+
+
+
 .st-highlight {
   color: #4ecdc4;
 }
