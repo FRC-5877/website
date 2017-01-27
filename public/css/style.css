@@ -455,7 +455,8 @@ h6 {
   }
 }
 .home {
-  background-image: url(../images/Mechalodons-Shark-Logo-shade.svg);
+  /*background-image: url(../images/Mechalodons-Shark-Logo-shade.svg);*/
+  background-image: url(../images/Mechalodons-Steampunk-Shaded.svg);
   background-position: top center;
   background-attachment: fixed;
   background-repeat: no-repeat;
