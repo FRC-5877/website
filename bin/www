@@ -1,25 +1,35 @@
 #!/usr/bin/env node
 
+const fs = require('fs');
+
 /**
  * Module dependencies.
  */
 
 var app = require('../app');
 var debug = require('debug')('Temp:server');
-var http = require('http');
-
+// var http = require('http');
+var https = require('https');
 /**
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '80');
+var port = normalizePort(process.env.PORT || '443');
 app.set('port', port);
+
+/**
+ * Cert Options
+ */
+const options = {
+  cert: fs.readFileSync('./sslcert/fullchain.pem'),
+  key: fs.readFileSync('./sslcert/privkey.pem')
+};
 
 /**
  * Create HTTP server.
  */
+var server = https.createServer(options, app);
 
-var server = http.createServer(app);
 
 /**
  * Listen on provided port, on all network interfaces.
