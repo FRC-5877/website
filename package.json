@@ -12,6 +12,8 @@
     "ejs": "~2.4.1",
     "emailjs": "^1.0.8",
     "express": "~4.13.4",
+    "express-force-ssl": "^0.3.2",
+    "helmet": "^3.6.1",
     "morgan": "~1.7.0",
     "node-sass-middleware": "0.8.0",
     "serve-favicon": "~2.3.0"
