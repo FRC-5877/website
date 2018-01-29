@@ -1,5 +1,6 @@
 var express = require('express');
 var path = require('path');
+var fs = require('fs');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
@@ -42,7 +43,10 @@ app.use('/notresponsible', function(req, res, next) {
 });
 
 app.use('/3VStAmagb2vEFNn3QHkbTRGx', function(req, res, next) {
-  res.download('./public/Temp/this.7z');
+  if(fs.existsSync(path.join(__dirname, 'public/Temp/this.7z')))
+    res.download('./public/Temp/this.7z');
+  else
+    res.render("notresponsible/oops");
 });
 
 // app.get('/health-check', (req, res) => res.sendStatus(200));
