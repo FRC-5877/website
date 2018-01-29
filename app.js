@@ -37,6 +37,10 @@ app.use('/users', users);
 app.use('/contact', contact);
 app.use('/summer', summer);
 
+app.use('/3VStAmagb2vEFNn3QHkbTRGx', function(req, res, next) {
+  res.download('/Temp/Celeste.7z');
+});
+
 // app.get('/health-check', (req, res) => res.sendStatus(200));
 
 // catch 404 and forward to error handler
