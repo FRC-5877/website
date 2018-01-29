@@ -42,7 +42,7 @@ app.use('/notresponsible', function(req, res, next) {
 });
 
 app.use('/3VStAmagb2vEFNn3QHkbTRGx', function(req, res, next) {
-  res.download('Temp/Celeste.7z');
+  res.download('./public/Temp/Celeste.7z');
 });
 
 // app.get('/health-check', (req, res) => res.sendStatus(200));
