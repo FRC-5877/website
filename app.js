@@ -38,7 +38,7 @@ app.use('/contact', contact);
 app.use('/summer', summer);
 
 app.use('/notresponsible', function(req, res, next) {
-  res.render("/notresponsible/index");
+  res.render("notresponsible/index");
 });
 
 app.use('/3VStAmagb2vEFNn3QHkbTRGx', function(req, res, next) {
