@@ -10,6 +10,7 @@ var routes = require('./routes/index');
 var users = require('./routes/users');
 var contact = require('./routes/contact');
 var summer = require('./routes/summer');
+var competition = require('./routes/competition');
 
 var app = express();
 
@@ -37,6 +38,7 @@ app.use('/', routes);
 app.use('/users', users);
 app.use('/contact', contact);
 app.use('/summer', summer);
+app.use('/competition', competition);
 
 app.use('/notresponsible', function(req, res, next) {
   res.render("notresponsible/index");
