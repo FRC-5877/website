@@ -12,7 +12,7 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<a class="navbar-brand" href="#"><img src="images/MECHALODONS.svg" alt="" width="240rem" class="img-responsive"></a>						
+						<a class="navbar-brand" href="#"><img src="images/MECHALODONS.svg" alt="" width="240rem" class="img-responsive"></a>
 					</div>
 
 					<!-- Discord Invite Link: https://discord.gg/0Vs8OlyPtSwRjKKW -->
@@ -424,7 +424,9 @@
 								<figcaption>
 									<h2>Build <span>2016</span></h2>
 									<p>Nautilus</p>
-									<!--<a href="#" class="btn btn-main"><i class="fa fa-link"></i> View more</a>-->
+									<a href="#" class="btn btn-main" data-toggle="modal" data-target="#myModal" data-local="#myCarousel">
+										<i class="fa fa-link"></i>View more
+									</a>
 								</figcaption>
 							</figure>
 
@@ -582,6 +584,54 @@
 			</div>
 		</div>
 
+		<div id="myCarousel" class="carousel slide carousel-fit" data-ride="carousel">
+			<!-- Indicators -->
+			<ol class="carousel-indicators">
+				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				<li data-target="#myCarousel" data-slide-to="1"></li>
+				<li data-target="#myCarousel" data-slide-to="2"></li>
+			</ol>
+
+			<!-- Wrapper for slides -->
+			<div class="carousel-inner">
+				<div class="item active">
+					<img src="images/events/build/2016/IMG_3811.jpg" alt="">
+				</div>
+				<div class="item">
+					<img src="images/events/build/2016/IMG_3812.jpg" alt="">
+				</div>
+				<div class="item">
+					<img src="images/events/build/2016/IMG_3813.jpg" alt="">
+				</div>
+			</div>
+
+			<!-- Controls -->
+			<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left"></span>
+			</a>
+			<a class="right carousel-control" href="#myCarousel" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right"></span>
+			</a>
+		</div>
+
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title">Modal title</h4>
+					</div>
+					<div class="modal-body">
+						<p>One fine body…</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary">Save changes</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+
 		<script src="js/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/jquery.easing.min.js"></script>
@@ -595,6 +645,8 @@
 		<script src="js/jquery.ajaxchimp.min.js"></script>
 		<script src="js/script.js"></script>
 
+		<script src="js/bootstrap-modal-carousel.js"/></script/>
+
 		<script>
 		
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -605,6 +657,7 @@
 			ga('create', 'UA-85272324-1', 'auto');
 			ga('send', 'pageview');
 
-	</script>
+	    </script>
+
 	</body>
 </html>
