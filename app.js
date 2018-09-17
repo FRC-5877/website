@@ -25,31 +25,14 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(require('node-sass-middleware')({
-  src: path.join(__dirname, 'public'),
-  dest: path.join(__dirname, 'public'),
-  indentedSyntax: true,
-  sourceMap: true
-}));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(require('helmet') ());
 
 app.use('/', routes);
 app.use('/users', users);
 app.use('/contact', contact);
-app.use('/summer', summer);
+// app.use('/summer', summer);
 app.use('/competition', competition);
-
-app.use('/notresponsible', function(req, res, next) {
-  res.render("notresponsible/index");
-});
-
-app.use('/3VStAmagb2vEFNn3QHkbTRGx', function(req, res, next) {
-  if(fs.existsSync(path.join(__dirname, 'public/Temp/this.7z')))
-    res.download('./public/Temp/this.7z');
-  else
-    res.render("notresponsible/oops");
-});
 
 // app.get('/health-check', (req, res) => res.sendStatus(200));
 

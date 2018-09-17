@@ -20,10 +20,14 @@ app.set('port', port);
 /**
  * Cert Options
  */
-const options = {
-  cert: fs.readFileSync('./sslcert/fullchain.pem'),
-  key: fs.readFileSync('./sslcert/privkey.pem')
-};
+let options = {};
+
+if(!hasArg("-debug")) {
+  options = {
+    cert: fs.readFileSync('./sslcert/fullchain.pem'),
+    key: fs.readFileSync('./sslcert/privkey.pem')
+  };
+}
 
 /**
  * Create HTTPS server.
@@ -105,4 +109,10 @@ function onListening() {
     ? 'pipe ' + addr
     : 'port ' + addr.port;
   debug('Listening on ' + bind);
+}
+
+function hasArg(argument) {
+  process.argv.forEach((val, index) => {
+    console.log(`${val}`)
+  })
 }
