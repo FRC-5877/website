@@ -112,7 +112,10 @@ function onListening() {
 }
 
 function hasArg(argument) {
-  process.argv.forEach((val, index) => {
-    console.log(`${val}`)
-  })
+  for (var j = 0; j < process.argv.length; j++) {
+    if (process.argv[j] === argument) {
+      return true;
+    }
+  }
+  return false;
 }

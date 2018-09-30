@@ -30,3 +30,9 @@ node_modules
 npm-debug.log
 sslcert
 package-lock.json
+
+# Idea files
+*.iml
+.idea
+
+.DS_Store

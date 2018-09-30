@@ -1,6 +1,7 @@
 <!DOCTYPE html>
+<!--suppress CommaExpressionJS -->
 <html>
-	<% include ./partials/header %>
+	<% include partials/header.ejs %>
 	<body>
 		<header class="st-navbar">
 			<nav class="navbar navbar-default navbar-fixed-top clearfix" role="navigation">
@@ -27,7 +28,7 @@
 							<li><form action="https://www.paypal.com/cgi-bin/webscr" style="padding-left: 20px; padding-right: 20px" method="post" target="_top">
 									<input type="hidden" name="cmd" value="_s-xclick">
 									<input type="hidden" name="hosted_button_id" value="BXYTCP7N9VCN8">
-									<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+									<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" name="submit" alt="PayPal - The safer, easier way to pay online!">
 									<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
 								</form></li>
 						</ul>
@@ -42,7 +43,7 @@
 					<div class="col-md-12">
 						<div class="st-home-unit">
 							<div class="hero-txt">
-								<h2 class="hero-title">Building Robots</br><span class="title-part2">Expanding Minds</span></h2>
+								<h2 class="hero-title">Building Robots<br><span class="title-part2">Expanding Minds</span></h2>
 								<p class="hero-work">Welcome To Our Waters</p>
 								<a href="#about" class="btn btn-main btn-lg">Find Out More</a>
 							</div>
@@ -237,14 +238,14 @@
 						<div class="row">
 							<div class="col-md-3">
 								<div class="st-feature">
-									<a href="https://github.com/FRC-5877/2016-Robot-Code"><div class="st-feature-icon"><i class="fa fa-github"></i></div></a>
+									<a href="https://github.com/FRC-5877/2016-Robot-Code" target="_blank"><div class="st-feature-icon"><i class="fa fa-github"></i></div></a>
 									<strong class="st-feature-title">Code</strong>
 									<p>View all of our robot code and other projects.</p>
 								</div>
 							</div>
 							<div class="col-md-3">
 								<div class="st-feature">
-									<a href="https://github.com/FRC-5877/2016-Robot-CAD"><div class="st-feature-icon"><i class="fa fa-cogs"></i></div></a>
+									<a href="https://github.com/FRC-5877/2016-Robot-CAD" target="_blank"><div class="st-feature-icon"><i class="fa fa-cogs"></i></div></a>
 									<strong class="st-feature-title">CAD Design</strong>
 									<p>Repository of our CAD and robot designs.</p>
 								</div>
@@ -258,7 +259,7 @@
 							</div>
 							<div class="col-md-3">
 								<div class="st-feature">
-									<a href="http://www.firstinspires.org/robotics/frc/safety"><div class="st-feature-icon"><i class="fa fa-medkit"></i></div></a>
+									<a href="https://www.firstinspires.org/robotics/frc/safety" target="_blank"><div class="st-feature-icon"><i class="fa fa-medkit"></i></div></a>
 									<strong class="st-feature-title">Safety First</strong>
 									<p>How to Robot safely.</p>
 								</div>
@@ -331,7 +332,6 @@
 			</div>
 		</section>
 		-->
-
 
 		<section class="portfolio" id="portfolio">
 			<div class="container-fluid ">
@@ -561,7 +561,7 @@
 						<h2 class="modal-title" id="myModalLabel">Resource Files</h2>
 					</div>
 					<div class="modal-body">
-						<span> <h3><i class="fa fa-file-pdf-o fa-lg pull-left"></i><a href="https://drive.google.com/open?id=1P99WkNZcJrMdcPN4JnrBfOOfalpxqyBV">Sponsor Packet</a></h3></span>
+						<h3><span><i class="fa fa-file-pdf-o fa-lg pull-left"></i><a href="https://drive.google.com/file/d/1rcTYvYkeZazsXXE1gIDK9tzLF9rsvQ_A/view">Sponsor Packet</a></span></h3>
 						<br/>
 						<br/>
 					</div>
@@ -1061,6 +1061,8 @@
 		<script src="js/jquery.shuffle.js"></script>
 		<script src="js/jquery.ajaxchimp.min.js"></script>
 		<script src="js/script.js"></script>
+
+
 
 
 		<script>
