@@ -182,7 +182,7 @@ $(function () {
 
       $.ajax({
           url: "/contact", 
-          type: "POST",        
+          type: "POST",
           data: data,     
           cache: false,
           success: function (html) {

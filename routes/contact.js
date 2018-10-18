@@ -5,6 +5,10 @@ var server = email.server.connect({
   hode: 'localhost'
 });
 
+router.get('/', (req, res, next) => {
+   res.status(200);
+});
+
 router.post('/', function(req, res, next) {
   console.log(req.body);
   if(req.body && req.body.fname && req.body.email && req.body.subj) {
