@@ -15,11 +15,12 @@ router.post('/', function(req, res, next) {
     server.send({
       text:    "New Contact Request from Website\nName: " + req.body.fname + "\nEmail: " + req.body.email + "\nSubject: " + req.body.subj + "\nMessage: " + req.body.mssg, 
       from:    "Do Not Reply <donotreply@team5877.com>", 
-      to:      "Contact <contact@team5877.com>",
+      to:      "contact@team5877.com",
       subject: "Contact from Website"
     }, function(err, message) {
       console.log(err || message);
-      res.send({code: 1});
+      if(!err)
+        res.send({code: 1});
     });
   } else {
     res.send({code: 0});
