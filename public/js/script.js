@@ -104,36 +104,58 @@ $(function () {
 	
 
 
-	$(".testimonials-carousel ul").owlCarousel({
-        items: 1,
-        navigation: false,
-        pagination: true,
-        singleItem:true,
-        autoPlay: true,
-        navigationText: ['<i class="ct-etp etp-arrow-left7"></i>', '<i class="ct-etp etp-arrow-right8"></i>'],
-        transitionStyle: "backSlide"
-    });
+	// $(".testimonials-carousel ul").owlCarousel({
+    //     items: 1,
+    //     navigation: false,
+    //     pagination: true,
+    //     singleItem:true,
+    //     autoPlay: true,
+    //     navigationText: ['<i class="ct-etp etp-arrow-left7"></i>', '<i class="ct-etp etp-arrow-right8"></i>'],
+    //     transitionStyle: "backSlide"
+    // });
 
-    $('.clients-carousel').owlCarousel({
-    	items: 5,
-    	autoPlay: true,
-    	pagination: false
-    });
+    // $('.clients-carousel').owlCarousel({
+    // 	items: 5,
+    // 	autoPlay: true,
+    // 	pagination: false
+    // });
 
     ////// mailchimp //////
-    $(".subscribe-form").ajaxChimp({
-        callback: mcCallback,
-        url: "http://cantothemes.us8.list-manage2.com/subscribe/post?u=37a0cb83e98c8633253ad0acd&id=03d8ef0996" // Replace your mailchimp post url inside double quote "".  
-    });
+    // $(".subscribe-form").ajaxChimp({
+    //     callback: mcCallback,
+    //     url: "http://cantothemes.us8.list-manage2.com/subscribe/post?u=37a0cb83e98c8633253ad0acd&id=03d8ef0996" // Replace your mailchimp post url inside double quote "".  
+    // });
 
-    function mcCallback (res) {
-		if(res.result === 'success') {
-			$('.subscribe-result').html('<i class="pe-7s-check"></i>' + res.msg).delay(500).slideDown(1000).delay(10000).slideUp(1000);
-		}else if(res.result === 'error'){
-			$('.subscribe-result').html('<i class="pe-7s-close-circle"></i>' + res.msg).delay(500).slideDown(1000).delay(10000).slideUp(1000);
-		}
-	}
+    // function mcCallback (res) {
+	// 	if(res.result === 'success') {
+	// 		$('.subscribe-result').html('<i class="pe-7s-check"></i>' + res.msg).delay(500).slideDown(1000).delay(10000).slideUp(1000);
+	// 	}else if(res.result === 'error'){
+	// 		$('.subscribe-result').html('<i class="pe-7s-close-circle"></i>' + res.msg).delay(500).slideDown(1000).delay(10000).slideUp(1000);
+	// 	}
+	// }
 
+
+});
+
+
+$(window).load(function () {
+	var $grid = $('.grid'),
+		$sizer = $grid.find('.shuffle__sizer'),
+		$filterType = $('#filter input[name="filter"]');
+
+	$grid.shuffle({
+		itemSelector: '.portfolio-item',
+		sizer: $sizer
+	});
+
+	$filterType.change(function(e) {
+		var group = $('#filter input[name="filter"]:checked').val();
+
+		$grid.shuffle('shuffle', group);
+
+		$('label.btn-main').removeClass('btn-main');
+		$('input[name="filter"]:checked').parent().addClass('btn-main');
+	});
 
 	/*
      * Contact Form Validation Code
@@ -158,33 +180,36 @@ $(function () {
         }
     }
 
-    $('.contact-form').submit(function (e) {
+    $('.contact-form').submit((e) => {
 		e.preventDefault();
-		var $this = $(this),
-			result = true;
+		// var $this = $(this),
+		// 	result = true;
 
-		if(!checkEmpty($this.find('#fname'))){
-			result=false;
-		}
-		if(!validateEmail($this.find('#email'))) {
-			result=false;
-		}
-		if(!checkEmpty($this.find('#mssg'))) {
-			result=false;
-		}
+		// if(!checkEmpty($this.find('#fname'))){
+		// 	console.log("Name is empty!")
+		// 	result=false;
+		// }
+		// if(!validateEmail($this.find('#email'))) {
+		// 	console.log("Email is empty!")
+		// 	result=false;
+		// }
+		// if(!checkEmpty($this.find('#mssg'))) {
+		// 	console.log("Message is empty!")
+		// 	result=false;
+		// }
 		
-		if(result==false) {
-			return false;
-		}
+		// if(result==false) {
+		// 	return false;
+		// }
 
 		var $btn = $("#send").button('loading');
 
-		var data = $this.serialize();
-
+		var data = $('.contact-form').serialize();
+		console.log("TEST");
 		$.ajax({
-			url: "/contact", 
+			url: "/contact",
 			type: "POST",
-			data: data,     
+			data: data,
 			cache: false,
 			success: function (html) {
 				console.log(html);
@@ -206,27 +231,6 @@ $(function () {
 			}
 		});
 
-		return false;
-	});
-});
-
-
-$(window).load(function () {
-	var $grid = $('.grid'),
-		$sizer = $grid.find('.shuffle__sizer'),
-		$filterType = $('#filter input[name="filter"]');
-
-	$grid.shuffle({
-		itemSelector: '.portfolio-item',
-		sizer: $sizer
-	});
-
-	$filterType.change(function(e) {
-		var group = $('#filter input[name="filter"]:checked').val();
-
-		$grid.shuffle('shuffle', group);
-
-		$('label.btn-main').removeClass('btn-main');
-		$('input[name="filter"]:checked').parent().addClass('btn-main');
+		// return false;
 	});
 });
