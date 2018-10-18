@@ -12,7 +12,7 @@ router.post('/', function(req, res, next) {
     sendmail({
       html:    "New Contact Request from Website\nName: " + req.body.fname + "\nEmail: " + req.body.email + "\nSubject: " + req.body.subj + "\nMessage: " + req.body.mssg, 
       from:    "contact@team5877.com",
-      to:      "contact@team5877.com",
+      to:      "doug@team5877.com, steve@team5877.com",
       subject: "Contact from Website"
     }, function(err, reply) {
       if(!err)
